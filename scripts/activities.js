@@ -1,4 +1,5 @@
 "use strict"
+console.log("all good over here")
 
 let categories = [{type:"Adventures"}, {type:"Arts & Crafts"}, {type:"Museums"}, {type:"Wine Tastings"}, {type:"Other"}];
 
@@ -105,9 +106,10 @@ window.onload = function () {
 
     initDropdown();
 
-    let theButton = document.querySelector("#theButton");
-    theButton.addEventListener("click", displayCategories);
+    let categoriesSelect = document.querySelector("#categoriesSelect");
+    categoriesSelect.addEventListener("click", displayCategories);
 
+    
 }
 
 function displayCategories() {
@@ -161,7 +163,7 @@ function displayCategories() {
             newOption.value = categories[i].type
 
             //add this option to the dropdown 
+            
             theDropdown.appendChild(newOption);
-
         }
     }
